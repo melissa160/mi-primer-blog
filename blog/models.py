@@ -3,10 +3,10 @@ from django.utils import timezone
 
 
 class Post(models.Model):
-	#atributos del modelo Post
+    #atributos del modelo Post
     author = models.ForeignKey('auth.User')#este campo se relaciona con la clase auth
     title = models.CharField(max_length=300)#campo tipo char
-    text = models.TextField()#campo de texto	
+    text = models.TextField()#campo de texto    
     created_date = models.DateTimeField(
             default=timezone.now)#pone la fecha actual
     published_date = models.DateTimeField(#requiere que el usuario digite la fecha pero puede ser blanco o nulo
